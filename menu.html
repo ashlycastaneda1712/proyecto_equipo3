@@ -4,97 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Cafeteria</title>
+    <title>Menú | Cafetería Minimalista</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body>
-    <header class="text-center py-4">
-        <h1>Menu Cafeteria</h1>
-        <p>Los mejores precios de la ciudad</p>
+    <header class="text-center">
+        <div class="container">
+            <h1 class="display-3">Nuestro menú</h1>
+            <p class="lead">Un espacio para los amantes del buen café</p>
+        </div>
     </header>
 
-    <nav class="text-center mb-4">
-        <a href="index.html" class="px-2">Inicio</a>
-        <a href="nosotros.html" class="px-2">Nosotros</a>
-        <a href="menu.html" class="px-2">Menu</a>
-        <a href="promociones.html" class="px-2">Promociones</a>
-        <a href="galeria.html" class="px-2">Galeria</a>
-        <a href="contacto.html" class="px-2">Contacto</a>
+    <nav class="text-center py-4 sticky-top bg-white border-bottom shadow-sm">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="menu.html" class="active">Menú</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
     </nav>
 
-    <div class="columnas-menu">
+    <main class="columnas-menu">
         <div class="container py-5">
-            <!-- Dos columnas centradas -->
+            <!-- Introducción al Menú -->
             <div class="row justify-content-center mb-5">
-                <div class="col-md-4 text-center border p-3">
-                    <h3>Columna 1</h3>
-                    <p>Contenido de la primera columna centrada.</p>
+                <div class="col-md-5 text-center border-custom p-5 m-2 bg-white">
+                    <h3 class="section-title">Café de Origen</h3>
+                    <p>Seleccionamos los mejores granos de altura para garantizar una experiencia única en cada taza.
+                    </p>
                 </div>
-                <div class="col-md-4 text-center border p-3">
-                    <h3>Columna 2</h3>
-                    <p>Contenido de la segunda columna centrada.</p>
+                <div class="col-md-5 text-center border-custom p-5 m-2 bg-white">
+                    <h3 class="section-title">Repostería Artesanal</h3>
+                    <p>Elaborados diariamente con ingredientes orgánicos y recetas tradicionales de la casa.</p>
                 </div>
             </div>
 
-            <!-- Cuatro columnas con tarjetas (cards) -->
-            <div class="row">
-                <div class="col-md-3 mb-4">
+            <!-- Galería de Productos -->
+            <h2 class="text-center mb-5 section-title d-block mx-auto" style="width: fit-content;">Especialidades</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Imagen 1">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-muted italic">
+                            <img src="img/expreso.jpg" alt="">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Descripción breve del producto o contenido.</p>
+                            <h5 class="card-title">Espresso</h5>
+                            <p class="card-text">La esencia pura del café, intenso y con cuerpo.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Imagen 2">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-muted italic">
+                            <img src="img/capuccino.webp" alt="" width="100%">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Producto 2</h5>
-                            <p class="card-text">Descripción breve del producto o contenido.</p>
+                            <h5 class="card-title">Cappuccino</h5>
+                            <p class="card-text">Equilibrio perfecto entre espresso, leche y crema.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Imagen 3">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-muted italic">
+                            <img src="img/flat-whitr.jpg" alt="" width="100%">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Producto 3</h5>
-                            <p class="card-text">Descripción breve del producto o contenido.</p>
+                            <h5 class="card-title">Flat White</h5>
+                            <p class="card-text">Textura sedosa con un sabor a café más pronunciado.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Imagen 4">
+                        <div class="card-img-top d-flex align-items-center justify-content-center text-muted italic">
+                            <img src="img/cold-brew.jpg" alt="" width="100%">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Producto 4</h5>
-                            <p class="card-text">Descripción breve del producto o contenido.</p>
+                            <h5 class="card-title">Cold Brew</h5>
+                            <p class="card-text">Café infusionado en frío durante 24 horas.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="seccion-inferior">
+    </main>
+
+    <section class="seccion-inferior">
         <div class="container py-5">
             <div class="row">
-                <div class="col-md-6 text-center border p-4">
-                    <h3>Sección Nueva 1</h3>
-                    <p>Contenido para la primera columna de la parte inferior.</p>
+                <div class="col-md-6 text-center p-4">
+                    <h3>Horarios de Atención</h3>
+                    <p>Lunes a Viernes: 7:00 AM - 8:00 PM<br>Sábados y Domingos: 8:00 AM - 9:00 PM</p>
                 </div>
-                <div class="col-md-6 text-center border p-4">
-                    <h3>Sección Nueva 2</h3>
-                    <p>Contenido para la segunda columna de la parte inferior.</p>
+                <div class="col-md-6 text-center p-4">
+                    <h3>Ubicación</h3>
+                    <p>Calle Principal #123, Distrito Histórico<br>Ciudad de Guatemala</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Cafetería Aurora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
