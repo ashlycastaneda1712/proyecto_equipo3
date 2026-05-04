@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones - Café Aurora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-header {
+            padding: 120px 20px 40px;
+            text-align: center;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(174, 124, 82, 0.2);
+        }
+
+        .page-header h1 {
+            color: var(--bg-dark);
+            font-size: 3rem;
+        }
+
+        .success-msg {
+            display: none;
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid #28a745;
+            color: #28a745;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    Navegación
+    <header class="navbar">
+        <!--
+        <div class="logo">Café Aurora</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#historia">Historia</a></li>
+                <li><a href="index.html#menu">Menú</a></li>
+                <li><a href="opiniones.html">Opiniones</a></li>
+                <li><a href="reservaciones.html" class="btn-reservar">Reservar</a></li>
+            </ul>
+        </nav>
+        -->
+    </header>
+
+    <div class="page-header">
+        <h1>Opiniones</h1>
+        <p>Tu opinión es muy importante para nosotros.</p>
+    </div>
+
+
+
+    <!-- Sección de Opiniones -->
+    <section class="form-section" style="background-color: var(--bg-light);">
+        <div class="container">
+
+            <div class="form-container" style="margin-bottom: 60px;">
+                <h2 class="text-center" style="color: var(--bg-dark); margin-bottom: 20px;">Déjanos tu Opinión</h2>
+                <div id="opinionSuccess" class="success-msg">¡Gracias por tu opinión!</div>
+                <form id="opinionForm">
+                    <div class="form-group">
+                        <label for="opNombre">Tu Nombre</label>
+                        <input type="text" id="opNombre" required placeholder="¿Cómo te llamas?">
+                    </div>
+                    <div class="form-group">
+                        <label for="opTexto">Tu Experiencia</label>
+                        <textarea id="opTexto" required
+                            placeholder="Cuéntanos qué te pareció el café y el ambiente..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Opinión</button>
+                </form>
+            </div>
+
+        </div>
+
+        <h2 class="text-center" style="color: var(--bg-dark);">Lo que dicen nuestros clientes</h2>
+        <div class="separator center"></div>
+
+        <div id="opinionesLista" class="reviews-grid">
+            <!-- Las opiniones se cargarán aquí desde localStorage -->
+        </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <!-- 
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Café Aurora</h3>
+                <p>Reviviendo la tradición del café.</p>
+            </div>
+            <div class="footer-bottom" style="grid-column: 1 / -1;">
+                <p>&copy; 2026 Café Aurora. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        -->
+    </footer>
+
+    <script>
+        // Funcionalidad de reservaciones eliminada de esta página
+
+        // Funcionalidad para Opiniones
+        const opinionForm = document.getElementById('opinionForm');
+        const opinionesLista = document.getElementById('opinionesLista');
+
+        function cargarOpiniones() {
+            let opiniones = JSON.parse(localStorage.getItem('opinionesAurora')) || [];
+            opinionesLista.innerHTML = '';
+
+            if (opiniones.length === 0) {
+                opinionesLista.innerHTML = '<p style="text-align:center; grid-column: 1/-1; opacity: 0.7;">Aún no hay opiniones. ¡Sé el primero en compartir tu experiencia!</p>';
+                return;
+            }
+
+            // Mostrar desde la más reciente
+            opiniones.reverse().forEach(op => {
+                const card = document.createElement('div');
+                card.className = 'review-card fade-in-up visible';
+                card.innerHTML = `
+                    <span class="review-author">${op.nombre}</span>
+                    <p class="review-text">"${op.texto}"</p>
+                `;
+                opinionesLista.appendChild(card);
+            });
+        }
+
+        opinionForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const opinion = {
+                id: Date.now(),
+                nombre: document.getElementById('opNombre').value,
+                texto: document.getElementById('opTexto').value
+            };
+
+            // Guardar
+            let opiniones = JSON.parse(localStorage.getItem('opinionesAurora')) || [];
+            opiniones.push(opinion);
+            localStorage.setItem('opinionesAurora', JSON.stringify(opiniones));
+
+            // Mostrar éxito y recargar lista
+            const successMsg = document.getElementById('opinionSuccess');
+            successMsg.style.display = 'block';
+            opinionForm.reset();
+
+            cargarOpiniones();
+
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 3000);
+        });
+
+        // Cargar opiniones al iniciar
+        cargarOpiniones();
+    </script>
+</body>
+
+</html>

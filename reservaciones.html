@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones - Café Aurora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-header {
+            padding: 120px 20px 40px;
+            text-align: center;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(174, 124, 82, 0.2);
+        }
+
+        .page-header h1 {
+            color: var(--bg-dark);
+            font-size: 3rem;
+        }
+
+        .success-msg {
+            display: none;
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid #28a745;
+            color: #28a745;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <!--
+        <div class="logo">Café Aurora</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#historia">Historia</a></li>
+                <li><a href="index.html#menu">Menú</a></li>
+                <li><a href="opiniones.html">Opiniones</a></li>
+                <li><a href="reservaciones.html" class="btn-reservar">Reservar</a></li>
+            </ul>
+        </nav>
+        -->
+    </header>
+
+    <div class="page-header">
+        <h1>Reservaciones</h1>
+        <p>Asegura tu mesa en nuestro espacio atemporal.</p>
+    </div>
+
+    <!-- Sección de Reservación -->
+    <section class="form-section">
+        <div class="container">
+
+
+            <div class="form-container">
+                <h2 class="text-center" style="color: var(--bg-dark); margin-bottom: 20px;">Reserva tu Mesa</h2>
+                <div id="reservaSuccess" class="success-msg">¡Reservación guardada con éxito!</div>
+                <form id="reservaForm">
+                    <div class="form-group">
+                        <label for="resNombre">Nombre Completo</label>
+                        <input type="text" id="resNombre" required placeholder="Ej. Juan Pérez">
+                    </div>
+                    <div class="form-group">
+                        <label for="resFecha">Fecha de la Reserva</label>
+                        <input type="date" id="resFecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resHora">Hora</label>
+                        <input type="time" id="resHora" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resPersonas">Número de Personas</label>
+                        <select id="resPersonas" required>
+                            <option value="1">1 Persona</option>
+                            <option value="2">2 Personas</option>
+                            <option value="3">3 Personas</option>
+                            <option value="4">4 Personas</option>
+                            <option value="5+">5 o más</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Confirmar Reservación</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- La sección de opiniones se ha movido a opiniones.html -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!--
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Café Aurora</h3>
+                <p>Reviviendo la tradición del café.</p>
+            </div>
+            <div class="footer-bottom" style="grid-column: 1 / -1;">
+                <p>&copy; 2026 Café Aurora. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        -->
+    </footer>
+
+    <script>
+        // Funcionalidad para la Reservación
+        const reservaForm = document.getElementById('reservaForm');
+        reservaForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const reserva = {
+                id: Date.now(),
+                nombre: document.getElementById('resNombre').value,
+                fecha: document.getElementById('resFecha').value,
+                hora: document.getElementById('resHora').value,
+                personas: document.getElementById('resPersonas').value
+            };
+
+            // Obtener reservaciones previas
+            let reservaciones = JSON.parse(localStorage.getItem('reservacionesAurora')) || [];
+            reservaciones.push(reserva);
+
+            // Guardar en localStorage
+            localStorage.setItem('reservacionesAurora', JSON.stringify(reservaciones));
+
+            // Mostrar mensaje de éxito y limpiar form
+            const successMsg = document.getElementById('reservaSuccess');
+            successMsg.style.display = 'block';
+            reservaForm.reset();
+
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 3000);
+        });
+
+        // Fin de script de reservaciones
+    </script>
+</body>
+
+</html>
