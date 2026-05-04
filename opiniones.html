@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles-res-op.css">
     <style>
         .page-header {
@@ -40,20 +41,8 @@
 
 <body>
 
-    Navegación
     <header class="navbar">
-        <!--
-        <div class="logo">Café Aurora</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html#inicio">Inicio</a></li>
-                <li><a href="index.html#historia">Historia</a></li>
-                <li><a href="index.html#menu">Menú</a></li>
-                <li><a href="opiniones.html">Opiniones</a></li>
-                <li><a href="reservaciones.html" class="btn-reservar">Reservar</a></li>
-            </ul>
-        </nav>
-        -->
+
     </header>
 
     <div class="page-header">
@@ -61,53 +50,68 @@
         <p>Tu opinión es muy importante para nosotros.</p>
     </div>
 
-
-
     <!-- Sección de Opiniones -->
-    <section class="form-section" style="background-color: var(--bg-light);">
-        <div class="container">
+    <div class="container-fluid py-5">
+        <div class="row align-items-center justify-content-center text-center">
 
-            <div class="form-container" style="margin-bottom: 60px;">
-                <h2 class="text-center" style="color: var(--bg-dark); margin-bottom: 20px;">Déjanos tu Opinión</h2>
-                <div id="opinionSuccess" class="success-msg">¡Gracias por tu opinión!</div>
-                <form id="opinionForm">
-                    <div class="form-group">
-                        <label for="opNombre">Tu Nombre</label>
-                        <input type="text" id="opNombre" required placeholder="¿Cómo te llamas?">
+            <!-- Imagen izquierda -->
+            <div class="col-md-4 col-12 mb-4 d-flex justify-content-center">
+                <img src="images/opiniones.png" alt="Imagen Opiniones" class="img-fluid rounded"
+                    style="max-width: 470px;">
+            </div>
+
+            <!-- Formulario -->
+            <div class="col-md-4 col-12 mb-4 d-flex justify-content-center">
+                <section class="form-section w-100" style="background-color: var(--bg-light); max-width:600px">
+                    <div class="form-container p-5">
+                        <h3 class="text-center mb-3" style="color: var(--bg-dark);">
+                            Déjanos tu Opinión
+                        </h3>
+
+                        <div id="opinionSuccess" class="success-msg text-center">
+                            ¡Gracias por tu opinión!
+                        </div>
+
+                        <form id="opinionForm">
+                            <div class="form-group mb-3 text-start">
+                                <label for="opNombre">Tu Nombre</label>
+                                <input type="text" id="opNombre" class="form-control" required>
+                            </div>
+
+                            <div class="form-group mb-3 text-start">
+                                <label for="opTexto">Tu Experiencia</label>
+                                <textarea id="opTexto" class="form-control" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">
+                                Enviar Opinión
+                            </button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="opTexto">Tu Experiencia</label>
-                        <textarea id="opTexto" required
-                            placeholder="Cuéntanos qué te pareció el café y el ambiente..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Enviar Opinión</button>
-                </form>
+                </section>
+            </div>
+
+            <!-- Imagen derecha -->
+            <div class="col-md-4 col-12 mb-4 d-flex justify-content-center">
+                <img src="images/opiniones2.png" alt="Imagen Opiniones" class="img-fluid rounded"
+                    style="max-width: 470px;">
             </div>
 
         </div>
+    </div>
 
-        <h2 class="text-center" style="color: var(--bg-dark);">Lo que dicen nuestros clientes</h2>
-        <div class="separator center"></div>
+    <!-- Opiniones -->
+    <h2 class="text-center" style="color: var(--bg-dark);">
+        Lo que dicen nuestros clientes
+    </h2>
+    <div class="separator center"></div>
 
-        <div id="opinionesLista" class="reviews-grid">
-            <!-- Las opiniones se cargarán aquí desde localStorage -->
-        </div>
-        </div>
-    </section>
+    <div id="opinionesLista" class="reviews-grid container"></div>
+
 
 
     <footer class="footer">
-        <!-- 
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h3>Café Aurora</h3>
-                <p>Reviviendo la tradición del café.</p>
-            </div>
-            <div class="footer-bottom" style="grid-column: 1 / -1;">
-                <p>&copy; 2026 Café Aurora. Todos los derechos reservados.</p>
-            </div>
-        </div>
-        -->
+
     </footer>
 
     <script>
