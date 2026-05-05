@@ -19,7 +19,7 @@
 
 body {
     background-color: var(--bg-light);
-    background-image: url('images/vintage_paper_texture.png');
+    background-image: url('/images/fondo-vintage.png');
     background-repeat: repeat;
     color: var(--text-dark);
     font-family: var(--font-body);
@@ -27,7 +27,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 600;
 }
@@ -174,9 +177,10 @@ a {
 }
 
 .btn-primary:hover {
-    background-color: #271b12; color: var(--accent-gold);
+    background-color: #271b12;
+    color: var(--accent-gold);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Historia Section */
@@ -251,7 +255,8 @@ a {
 }
 
 .menu-card {
-    background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(174, 124, 82, 0.2);
     border-radius: 8px;
     overflow: hidden;
@@ -260,7 +265,7 @@ a {
 
 .menu-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     border-color: rgba(205, 163, 101, 0.3);
 }
 
@@ -318,7 +323,8 @@ a {
     margin-bottom: 40px;
 }
 
-.footer h3, .footer h4 {
+.footer h3,
+.footer h4 {
     color: var(--accent-gold);
     margin-bottom: 20px;
 }
@@ -352,7 +358,7 @@ a {
     color: var(--text-light);
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0.5;
     font-size: 0.9rem;
 }
@@ -377,13 +383,14 @@ a {
 }
 
 .form-container {
-    background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(205, 163, 101, 0.2);
     border-radius: 8px;
     padding: 40px;
     max-width: 600px;
     margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .form-group {
@@ -403,7 +410,8 @@ a {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(174, 124, 82, 0.4);
     border-radius: 4px;
     color: var(--text-dark);
@@ -439,7 +447,8 @@ button[type="submit"] {
 }
 
 .review-card {
-    background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px);
     padding: 25px;
     border-left: 4px solid var(--accent-gold);
     border-radius: 4px;
@@ -480,6 +489,7 @@ button[type="submit"] {
 }
 
 @media (max-width: 768px) {
+
     .page-header h1::before,
     .page-header h1::after,
     h2.text-center::before,
@@ -493,34 +503,34 @@ button[type="submit"] {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .form-container {
         padding: 25px 15px !important;
     }
-    
+
     .image-frame {
         padding: 0;
     }
-    
+
     .image-frame img {
         transform: rotate(0);
         max-width: 90%;
         border-width: 8px;
     }
-    
+
     .historia-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .navbar {
         flex-direction: column;
         padding: 15px;
     }
-    
+
     .nav-links {
         display: flex;
         flex-direction: row;
@@ -532,17 +542,20 @@ button[type="submit"] {
         gap: 20px;
         margin-top: 15px;
     }
+
     .nav-links::-webkit-scrollbar {
         height: 4px;
     }
+
     .nav-links::-webkit-scrollbar-thumb {
-        background: rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.2);
         border-radius: 4px;
     }
 }
 
 /* Adornos vintage en titulos */
-.page-header h1, h2.text-center {
+.page-header h1,
+h2.text-center {
     display: flex;
     align-items: center;
     justify-content: center;
