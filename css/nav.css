@@ -1,0 +1,35 @@
+/* Estilo personalizado para el Navbar */
+.navbar-aurora {
+    background-color: #3e2716;
+    /* El tono café oscuro de tu sitio */
+    font-family: 'Playfair Display', serif;
+    /* O la tipografía elegante que estés usando */
+    border-bottom: 2px solid #c0a080;
+    /* Un detalle sutil en dorado/crema */
+    padding: 1rem 0;
+}
+
+.navbar-aurora .navbar-brand {
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #f8f4e1 !important;
+    /* Color crema para el texto */
+}
+
+.navbar-aurora .nav-link {
+    color: #f8f4e1 !important;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.navbar-aurora .nav-link:hover {
+    color: #c0a080 !important;
+    /* Cambia a un tono café claro/dorado */
+    text-decoration: underline;
+}
+
+.navbar-aurora .nav-link.active {
+    border-bottom: 1px solid #f8f4e1;
+}
