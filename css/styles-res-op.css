@@ -378,7 +378,7 @@ a {
 /* Responsive */
 /* Forms (Reservaciones & Opiniones) */
 .form-section {
-    padding: 100px 0;
+    /* antes 100px */
     background-color: transparent;
 }
 
