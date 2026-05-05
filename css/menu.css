@@ -1,0 +1,157 @@
+/* 
+    Menu Cafetería - Estilo Minimalista
+    Colores: Cafés, Grises, Beige, Blancos
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --cafe-oscuro: #4b3832;
+    --cafe-medio: #854442;
+    --beige: #f5f5dc;
+    --beige-claro: #fff4e6;
+    --gris-oscuro: #3c2f2f;
+    --gris-claro: #dbe3e5;
+    --blanco: #ffffff;
+    --blanco-hueso: #fcfaf9;
+}
+
+body {
+    background-color: var(--blanco-hueso);
+    color: var(--gris-oscuro);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--cafe-oscuro);
+}
+
+header {
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--gris-claro);
+    padding: 60px 0;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+}
+
+header p {
+    color: var(--cafe-medio);
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--gris-oscuro);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: var(--cafe-medio);
+}
+
+nav a.active {
+    font-weight: 600;
+    border-bottom: 2px solid var(--cafe-medio);
+}
+
+.columnas-menu {
+    background-color: var(--blanco-hueso);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: var(--cafe-medio);
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    background-color: var(--blanco);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(75, 56, 50, 0.1);
+}
+
+.card-img-top {
+    border-radius: 0;
+    background-color: var(--beige-claro);
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-weight: 300;
+    color: var(--cafe-medio);
+    font-size: 0.95rem;
+}
+
+.border-custom {
+    border: 1px solid var(--gris-claro) !important;
+}
+
+.bg-beige {
+    background-color: var(--beige-claro);
+}
+
+.seccion-inferior {
+    background-color: var(--cafe-oscuro);
+    color: var(--blanco-hueso);
+}
+
+.seccion-inferior h3 {
+    color: var(--beige);
+}
+
+footer {
+    padding: 40px 0;
+    background-color: var(--blanco);
+    border-top: 1px solid var(--gris-claro);
+    font-size: 0.8rem;
+    color: var(--cafe-medio);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
