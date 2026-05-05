@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Cafetería Aurora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .page-header {
+            background-color: var(--bg-dark);
+            color: var(--accent-gold);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-dark);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+        }
+
+        .value-box {
+            background-color: white;
+            border: 2px solid var(--accent-gold);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .value-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(139, 94, 60, 0.2);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--accent-dark);
+            margin-bottom: 15px;
+        }
+
+        .product-card {
+            border: 1px solid var(--accent-gold);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-img-wrapper {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-title {
+            color: var(--bg-dark);
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark p-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.5rem;">Cafetería
+                Aurora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="nosotros.html"
+                            style="color: var(--accent-gold) !important;">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Nuestra Historia</h1>
+            <p class="lead" style="color: var(--text-light);">Somos tradición, sabor y elegancia en cada taza.</p>
+        </div>
+    </header>
+    <section class="section container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop"
+                    class="img-fluid rounded shadow" alt="Interior vintage de cafetería"
+                    style="border: 3px solid var(--accent-gold);">
+            </div>
+            <div class="col-lg-6">
+                <h2 style="color: var(--accent-dark); margin-bottom: 20px;">Nuestra Historia: El Comienzo de la Magia
+                </h2>
+                <p>Cafetería Aurora nació del deseo de rescatar las tardes de café pausadas y las charlas compartidas.
+                    Lo que comenzó como un pequeño rincón en Ciudad Antigua se convirtió en un refugio para quienes
+                    buscan calidad en cada grano. Inspirados en la calidez de los hogares de antaño, seleccionamos
+                    cuidadosamente cada tostado para ofrecerte no solo una bebida, sino una experiencia que rinde
+                    homenaje a nuestras raíces cafeteras.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section" style="background-color: var(--bg-dark); color: var(--text-light);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="color: var(--accent-gold);">Nuestros Valores</h2>
+                <p>Seleccionamos granos de fincas locales, tostados artesanalmente para resaltar notas únicas en cada
+                    taza.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-box">
+                        <div class="value-icon">☕</div>
+                        <h4 style="color: var(--accent-dark);">Calidad Premium</h4>
+                        <p style="color: #666;">Seleccionamos granos de fincas locales, tostados artesanalmente para
+                            resaltar notas únicas en cada taza.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-box">
+                        <div class="value-icon">🤝</div>
+                        <h4 style="color: var(--accent-dark);">Trato Familiar</h4>
+                        <p style="color: #666;">Creemos que cada cliente es un invitado de honor; te recibimos con la
+                            calidez y el respeto que te mereces.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-box">
+                        <div class="value-icon">🌿</div>
+                        <h4 style="color: var(--accent-dark);">Sustentabilidad</h4>
+                        <p style="color: #666;">Trabajamos de la mano con productores responsables para proteger nuestra
+                            tierra y garantizar un comercio justo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section container">
+        <div class="text-center mb-5">
+            <h2 style="color: var(--accent-dark);">Lo Que Ofrecemos</h2>
+            <p>Descubre nuestra exquisita selección de productos artesanales.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop"
+                            alt="Café de Especialidad" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Café de Especialidad</h3>
+                        <p class="product-desc">Desde un intenso Espresso hasta un suave Filtrado, cada extracción es
+                            una obra de arte.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?q=80&w=2070&auto=format&fit=crop"
+                            alt="Repostería Fina" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Repostería Fina</h3>
+                        <p class="product-desc">Postres horneados diariamente con recetas tradicionales y un toque de
+                            innovación.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://i.pinimg.com/736x/f5/d0/96/f5d096df2ab52056beacf6bbfac984cc.jpg"
+                            alt="Bebidas Frías" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bebidas Frías</h3>
+                        <p class="product-desc">Refrescantes creaciones con café y frutas de temporada, ideales para
+                            cualquier momento del día.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=2037&auto=format&fit=crop"
+                            alt="Infusiones y Tés" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Infusiones y Tés</h3>
+                        <p class="product-desc">Una selección botánica diseñada para calmar el espíritu y deleitar el
+                            paladar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://i.pinimg.com/1200x/8f/48/c0/8f48c0432f5c29d8b67ee261ad12b365.jpg"
+                            alt="Sándwiches Gourmet" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sándwiches Gourmet</h3>
+                        <p class="product-desc">Ingredientes frescos y panes artesanales en combinaciones que satisfacen
+                            tus antojos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://i.pinimg.com/736x/85/22/4b/85224b44a66b0f6d323a3e6d57e983bb.jpg"
+                            alt="Desayunos Clásicos" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Desayunos Clásicos</h3>
+                        <p class="product-desc">Empieza tu mañana con el sabor reconfortante de un desayuno hecho con
+                            amor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold);">Cafetería Aurora</h3>
+            <p>El sabor vintage que enamora.</p>
+            <p>&copy; 2026 Cafetería Aurora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

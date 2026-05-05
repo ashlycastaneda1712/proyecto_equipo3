@@ -19,8 +19,6 @@
 
 body {
     background-color: var(--bg-light);
-    background-image: url('/images/fondo-vintage.png');
-    background-repeat: repeat;
     color: var(--text-dark);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -50,7 +48,6 @@ a {
 .separator {
     width: 250px;
     height: 40px;
-    background-image: url('images/separator.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -378,7 +375,7 @@ a {
 /* Responsive */
 /* Forms (Reservaciones & Opiniones) */
 .form-section {
-    padding: 100px 0;
+    /* antes 100px */
     background-color: transparent;
 }
 
